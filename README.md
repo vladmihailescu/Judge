@@ -1,7 +1,7 @@
 # Local Testing Judge
 
 Local IOI style Testing Judge. Can be used for offline programming contests or into backend of an online judge.
-Works on Windows, and it is not portable.
+Works on Windows for C and C++ sources, and it is not portable.
 
 Exemple:
 
