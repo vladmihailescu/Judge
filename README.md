@@ -14,3 +14,5 @@ Name of the problem is "problem1".
   The format for correct output case file name is "(test_number)-(problem_name).ok".
 - In folder "a", add the executable Judge.exe ("a\Judge.exe"), and all the contestant source codes.
   The format for source code is "(contestant_unique_nickname).(extension)". Extension can be .cpp or .c.
+- Run the Judge.exe, complete the fields, and then wait for the results.
+- The results will be in "a\results.txt".
