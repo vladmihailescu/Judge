@@ -1,0 +1,39 @@
+
+---Contestant: sursa1, Problem: ghiozdan
+Test   1, Time 0.01, Verdict    OK 
+Test   2, Time 0.01, Verdict    OK 
+Test   3, Time 0.01, Verdict    WA 
+Test   4, Time 0.01, Verdict    WA 
+Test   5, Time 0.01, Verdict    WA 
+Test   6, Time 1.00, Verdict   TLE 
+Test   7, Time 1.00, Verdict   TLE 
+Test   8, Time 1.00, Verdict   TLE 
+Test   9, Time 1.00, Verdict   TLE 
+Test  10, Time 0.01, Verdict    OK 
+---Contestant "sursa1" score for problem "ghiozdan" is : 30 
+
+---Contestant: sursa2, Problem: ghiozdan
+Test   1, Time 0.01, Verdict    WA 
+Test   2, Time 0.01, Verdict    OK 
+Test   3, Time 0.01, Verdict    OK 
+Test   4, Time 0.01, Verdict    OK 
+Test   5, Time 0.01, Verdict    OK 
+Test   6, Time 0.05, Verdict    OK 
+Test   7, Time 0.05, Verdict    WA 
+Test   8, Time 0.05, Verdict    WA 
+Test   9, Time 0.06, Verdict    OK 
+Test  10, Time 0.01, Verdict    OK 
+---Contestant "sursa2" score for problem "ghiozdan" is : 70 
+
+---Contestant: sursa1, Problem: ghiozdan
+Test   1, Time 0.01, Verdict    OK 
+Test   2, Time 0.01, Verdict    OK 
+Test   3, Time 0.01, Verdict    WA 
+Test   4, Time 0.01, Verdict    WA 
+Test   5, Time 0.01, Verdict    WA 
+Test   6, Time 1.00, Verdict   TLE 
+Test   7, Time 1.00, Verdict   TLE 
+Test   8, Time 1.00, Verdict   TLE 
+Test   9, Time 1.00, Verdict   TLE 
+Test  10, Time 0.01, Verdict    OK 
+---Contestant "sursa1" score for problem "ghiozdan" is : 30 

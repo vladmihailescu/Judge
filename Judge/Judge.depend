@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1529859337 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
+	"contestant.h"
+	"iostream"
+	"windows.h"
+
+1529859337 d:\programs\github\judge\judge\judge\src\contestant.h
+	"string"
+	"map"
+	"problem.h"
+	"util.h"
+	"utility"
+
+1529859337 d:\programs\github\judge\judge\judge\src\problem.h
+	"string"
+	"util.h"
+
+1529859337 d:\programs\github\judge\judge\judge\src\util.h
+	"string"
+	"fstream"
+	"thread"
+
+1529859337 source:d:\programs\github\judge\judge\judge\src\problem.cpp
+	"problem.h"
+
+1529859337 source:d:\programs\github\judge\judge\judge\src\util.cpp
+	"util.h"
+
