@@ -32,7 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="src/contestant.cpp" />
+		<Unit filename="src/contestant.h" />
+		<Unit filename="src/defines.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/problem.cpp" />
+		<Unit filename="src/problem.h" />
+		<Unit filename="src/util.cpp" />
+		<Unit filename="src/util.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

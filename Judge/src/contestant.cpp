@@ -1,7 +1,6 @@
 #include "contestant.h"
 
-#include "iostream"
-#include "windows.h"
+#define GCC 0
 
 Contestant::Contestant(std::string sourceName){
     m_score.clear();
@@ -25,18 +24,6 @@ void Contestant::JudgeProblem(Problem CurrentProblem){
         m_score[i] = verdict;
     }
 }
-void Contestant::PrintScore(){
-    for(auto i : m_score){
-        std::string judge;
-        if(i.second.second == util::Verdict::OK)
-            judge = "OK";
-        if(i.second.second == util::Verdict::TLE)
-            judge = "TLE";
-        if(i.second.second == util::Verdict::WA)
-            judge = "WA";
-        std::cout << "Test #" << i.first << ", " <<  "Time: " << i.second.first << ", " << "Verdict: " << judge << "\n";
-    }
-}
 void Contestant::AppendScoreToFile(std::string FileName, Problem CurrentProblem){
     FILE *f = fopen(FileName.c_str(),"a");
     int total = 0;
@@ -56,7 +43,8 @@ void Contestant::AppendScoreToFile(std::string FileName, Problem CurrentProblem)
             judge = "KBS";
         fprintf(f, "Test %3d, Time %2.2f, Verdict %5s \n", i.first, i.second.first , judge.c_str());
     }
-    fprintf(f,"---Contestant \"%s\" score for problem \"%s\" is : %d \n", m_sourceName.c_str(), CurrentProblem.GetName().c_str(), total);
+    fprintf(f,"---Contestant \"%s\" score for problem \"%s\" is : %d \n",
+              m_sourceName.c_str(), CurrentProblem.GetName().c_str(), total);
     fclose(f);
 }
 
@@ -87,7 +75,12 @@ std::pair<float,util::Verdict> Contestant::RunSource(std::string ProblemName, Pr
     STARTUPINFO si { 0 };
     bool killProcess = 0;
 
+    #if GCC
+    cmd = "gcc " + m_sourceName + ".c" + " -o " + exeFile;
+    #else
     cmd = "g++ " + m_sourceName + ".cpp" + " -o " + exeFile;
+    #endif
+
     system(cmd.c_str());
     cmd = exeFile + ".exe";
     status = CreateProcess(
@@ -103,7 +96,6 @@ std::pair<float,util::Verdict> Contestant::RunSource(std::string ProblemName, Pr
         &pi
     );
     if(0 == status){
-        std::cout << "CreateProcess failed " << GetLastError() << '\n';
         verdict = util::Verdict::KBS;
         goto CleanUp;
     }
@@ -119,7 +111,6 @@ std::pair<float,util::Verdict> Contestant::RunSource(std::string ProblemName, Pr
             &processExitCode
         );
         if(0 == status){
-            std::cout << "GetExitCodeProcess failed " << GetLastError() << '\n';
             verdict = util::Verdict::KBS;
             goto CleanUp;
         }
@@ -130,14 +121,12 @@ std::pair<float,util::Verdict> Contestant::RunSource(std::string ProblemName, Pr
     }
 
     if(1 == tle){
-        std::cout << "Time limit exceeded\n";
-
         status = TerminateProcess(
             pi.hProcess,
             0
         );
         if(0 == status){
-            std::cout << "TerminateProcess failed " << GetLastError() << '\n';
+            goto CleanUp;
         }
         killProcess = 0;
     }
@@ -153,15 +142,11 @@ std::pair<float,util::Verdict> Contestant::RunSource(std::string ProblemName, Pr
 
     CleanUp:
     if(1 == killProcess){
-        TerminateProcess(
-            pi.hProcess,
-            0
-        );
+        TerminateProcess(pi.hProcess, 0);
     }
 
     cmd = "del " + ProblemName + ".out";
     system(cmd.c_str());
-
     cmd = "del " + m_sourceName + "Exec" + ".exe";
     system(cmd.c_str());
 

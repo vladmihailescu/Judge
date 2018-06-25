@@ -1,28 +1,36 @@
 # depslib dependency file v1.0
-1529859337 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
+1529865142 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
 	"contestant.h"
-	"iostream"
-	"windows.h"
 
-1529859337 d:\programs\github\judge\judge\judge\src\contestant.h
+1529864754 d:\programs\github\judge\judge\judge\src\contestant.h
+	"defines.h"
+	"problem.h"
+
+1529948381 d:\programs\github\judge\judge\judge\src\problem.h
+	"defines.h"
+
+1529949910 d:\programs\github\judge\judge\judge\src\util.h
+	"defines.h"
+
+1529948400 source:d:\programs\github\judge\judge\judge\src\problem.cpp
+	"problem.h"
+
+1529864353 source:d:\programs\github\judge\judge\judge\src\util.cpp
+	"util.h"
+
+1529865160 source:d:\programs\github\judge\judge\judge\src\main.cpp
+	"problem.h"
+	"contestant.h"
+	"defines.h"
+
+1529865110 d:\programs\github\judge\judge\judge\src\defines.h
 	"string"
 	"map"
-	"problem.h"
-	"util.h"
-	"utility"
-
-1529859337 d:\programs\github\judge\judge\judge\src\problem.h
+	"windows.h"
 	"string"
-	"util.h"
-
-1529859337 d:\programs\github\judge\judge\judge\src\util.h
-	"string"
-	"fstream"
 	"thread"
-
-1529859337 source:d:\programs\github\judge\judge\judge\src\problem.cpp
-	"problem.h"
-
-1529859337 source:d:\programs\github\judge\judge\judge\src\util.cpp
+	"iostream"
+	"fstream"
+	"utility"
 	"util.h"
 

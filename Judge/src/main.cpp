@@ -1,21 +1,14 @@
-#include "util.h"
 #include "problem.h"
 #include "contestant.h"
-
-#include "windows.h"
-#include "string"
-#include "thread"
-#include "iostream"
-#include "fstream"
+#include "defines.h"
 
 int main(){
-
     std::string problemName = "";
     float timeLimit = 0.0;
     int testCases = 0;
     int testPoints = 0;
 
-    std::cout << "Problem name: ";
+    std::cout << "Problem nameee: ";
     std::cin >> problemName;
     std::cout << "Time limit: ";
     std::cin >> timeLimit;

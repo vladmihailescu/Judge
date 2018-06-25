@@ -17,26 +17,26 @@ Problem::Problem(
     m_secondsTimeLimit = TimeLimit;
 }
 
-std::string& Problem::GetInDirPath(){
+const std::string& Problem::GetInDirPath(){
     return this->m_inDirPath;
 }
 
-std::string& Problem::GetOkDirPath(){
+const std::string& Problem::GetOkDirPath(){
     return this->m_okDirPath;
 }
 
-std::string& Problem::GetName(){
+const std::string& Problem::GetName(){
     return this->m_name;
 }
 
-int& Problem::GetNumberOfTests(){
+const int& Problem::GetNumberOfTests(){
     return this->m_nrTests;
 }
 
-int& Problem::GetTestPoints(){
+const int& Problem::GetTestPoints(){
     return this->m_testPoints;
 }
 
-float& Problem::GetTimeLimit(){
+const float& Problem::GetTimeLimit(){
     return this->m_secondsTimeLimit;
 }

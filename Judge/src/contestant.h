@@ -1,19 +1,16 @@
 #ifndef _CONTESTANT_H_
 #define _CONTESTANT_H_
 
-#include "string"
-#include "map"
+#include "defines.h"
 #include "problem.h"
-#include "util.h"
-#include "utility"
 
 class Contestant{
 public:
+    Contestant(std::string sourceName);
+
     void JudgeProblem(Problem CurrentProblem);
-    void PrintScore();
     void AppendScoreToFile(std::string FileName, Problem CurrentProblem);
 
-    Contestant(std::string sourceName);
 private:
     void CopyFileLocal(std::string Path, std::string Destination);
     std::pair<float, util::Verdict> RunSource(std::string ProblemName, Problem CurrentProblem);

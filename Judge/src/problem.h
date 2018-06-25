@@ -1,8 +1,7 @@
 #ifndef _PROBLEM_H_
 #define _PROBLEM_H_
 
-#include "string"
-#include "util.h"
+#include "defines.h"
 
 class Problem{
 public:
@@ -15,12 +14,12 @@ public:
         float TimeLimit
     );
 
-    std::string& GetInDirPath();
-    std::string& GetOkDirPath();
-    std::string& GetName();
-    int& GetNumberOfTests();
-    int& GetTestPoints();
-    float& GetTimeLimit();
+    const std::string& GetInDirPath();
+    const std::string& GetOkDirPath();
+    const std::string& GetName();
+    const int& GetNumberOfTests();
+    const int& GetTestPoints();
+    const float& GetTimeLimit();
 
 private:
     std::string m_inDirPath;

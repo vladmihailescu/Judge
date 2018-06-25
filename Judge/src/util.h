@@ -1,9 +1,7 @@
 #ifndef _UTIL_H_
 #define _UTIL_H_
 
-#include "string"
-#include "fstream"
-#include "thread"
+#include "defines.h"
 
 namespace util{
     enum class Verdict{
@@ -14,6 +12,7 @@ namespace util{
     };
 
     int CompareFiles(std::string FirstFilePath, std::string SecondFilePath);
+
     void SleepInMilliseconds(int Milliseconds);
 }
 
