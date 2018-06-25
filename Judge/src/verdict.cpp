@@ -1,19 +1,23 @@
 #include "verdict.h"
 
-/*
 Verdict::Verdict(){
-    m_message = util::Verdict::KBS;
+    m_message = util::Message::KBS;
     m_time = 0.0;
     m_memoryKb = 0;
 }
 
-const util::Message& GetMessage(){
+Verdict::Verdict(util::Message InitMessage, float Time, int MemoryKb){
+    m_message = InitMessage;
+    m_time = Time;
+    m_memoryKb = MemoryKb;
+}
+
+util::Message Verdict::GetMessage(){
     return this->m_message;
 }
-const float& GetTime(){
+float Verdict::GetTime(){
     return this->m_time;
 }
-const float& GetMemory(){
+int Verdict::GetMemory(){
     return this->m_memoryKb;
 }
-*/

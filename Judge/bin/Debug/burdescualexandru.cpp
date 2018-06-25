@@ -1,4 +1,5 @@
 #include<fstream>
+#include<algorithm>
 using namespace std;
 int d,k,t;
 int a[100005];
@@ -18,33 +19,29 @@ int main()
     {
         a[j]=a[j]-a[j-1];
     }
-    int c1=0;
-    int c2=d;
-    int mij;
-    int ct;
-    int ok;
-    while(c1<c2)
+    sort(a+1,a+k+1);
+    int r=k;
+    int cat;
+    while(t>0)
     {
-        ct=t;
-        mij=(c1+c2)/2;
-        for(int i=k;i>=1;i--)
+        if(a[r]==a[r-1])
         {
-            if(mij<a[i])
-            {
-                ct=ct-(a[i]-mij);
-            }
-        }
-        if(ct>=0)
-        {
-           ok=mij;
-           c2=mij-1;
+            r--;
         }
         else
         {
-            c1=mij+1;
+            if(t>(a[r]-a[r-1])*(k-r+1))
+            {
+                t=t-(a[r]-a[r-1])*(k-r+1);
+            }
+            else
+            {
+                cat=t/(k-r+1);
+                t=0;
+            }
         }
     }
-    fout<<ok;
+    fout<<a[r]-cat;
     fin.close();
     fout.close();
     return 0;

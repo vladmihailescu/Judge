@@ -14,12 +14,12 @@ public:
         float TimeLimit
     );
 
-    const std::string& GetInDirPath();
-    const std::string& GetOkDirPath();
-    const std::string& GetName();
-    const int& GetNumberOfTests();
-    const int& GetTestPoints();
-    const float& GetTimeLimit();
+    std::string GetInDirPath();
+    std::string GetOkDirPath();
+    std::string GetName();
+    int GetNumberOfTests();
+    int GetTestPoints();
+    float GetTimeLimit();
 
 private:
     std::string m_inDirPath;

@@ -3,6 +3,7 @@
 
 #include "defines.h"
 #include "problem.h"
+#include "verdict.h"
 
 class Contestant{
 public:
@@ -13,12 +14,13 @@ public:
 
 private:
     void CopyFileLocal(std::string Path, std::string Destination);
-    std::pair<float, util::Verdict> RunSource(std::string ProblemName, Problem CurrentProblem);
+    Verdict RunSource(Problem CurrentProblem);
     void DeleteFileLocal(std::string Path);
 
     std::string m_sourceName;
-    std::map<int, std::pair<float, util::Verdict> > m_score;
-    int m_integerScore;
+    std::string m_sourceExtension;
+    std::map<int, Verdict> m_score;
+    int m_totalScore;
 };
 
 #endif

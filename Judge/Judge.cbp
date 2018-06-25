@@ -40,6 +40,9 @@
 		<Unit filename="src/problem.h" />
 		<Unit filename="src/util.cpp" />
 		<Unit filename="src/util.h" />
+		<Unit filename="src/verdict.cpp" />
+		<Unit filename="src/verdict.h" />
+		<Unit filename="verdict.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

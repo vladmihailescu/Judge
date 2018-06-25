@@ -1,0 +1,78 @@
+
+---Contestant: axinteteodor, Problem: ghiozdan
+Test   1, Time 0.01, Memory     0, Verdict    OK 
+Test   2, Time 0.01, Memory     0, Verdict    OK 
+Test   3, Time 0.01, Memory     0, Verdict    OK 
+Test   4, Time 0.01, Memory     0, Verdict    OK 
+Test   5, Time 0.01, Memory     0, Verdict    OK 
+Test   6, Time 0.06, Memory  8917, Verdict    OK 
+Test   7, Time 0.05, Memory  8829, Verdict    OK 
+Test   8, Time 0.05, Memory  8805, Verdict    OK 
+Test   9, Time 0.06, Memory  8845, Verdict    OK 
+Test  10, Time 0.01, Memory     0, Verdict    OK 
+---Contestant "axinteteodor" score for problem "ghiozdan" is : 100 
+
+---Contestant: burdescualexandru, Problem: ghiozdan
+Test   1, Time 0.01, Memory     0, Verdict    WA 
+Test   2, Time 0.01, Memory     0, Verdict    WA 
+Test   3, Time 0.01, Memory     0, Verdict    WA 
+Test   4, Time 0.01, Memory     0, Verdict    OK 
+Test   5, Time 0.01, Memory     0, Verdict    OK 
+Test   6, Time 0.07, Memory  8933, Verdict    WA 
+Test   7, Time 0.09, Memory  8837, Verdict    OK 
+Test   8, Time 0.07, Memory  8821, Verdict    WA 
+Test   9, Time 0.07, Memory  8829, Verdict    OK 
+Test  10, Time 0.01, Memory     0, Verdict    OK 
+---Contestant "burdescualexandru" score for problem "ghiozdan" is : 50 
+
+---Contestant: madarasalexandra, Problem: ghiozdan
+Test   1, Time 0.01, Memory     0, Verdict    OK 
+Test   2, Time 0.01, Memory     0, Verdict    OK 
+Test   3, Time 0.01, Memory     0, Verdict    OK 
+Test   4, Time 0.01, Memory     0, Verdict    OK 
+Test   5, Time 0.01, Memory     0, Verdict    OK 
+Test   6, Time 0.07, Memory  8839, Verdict    OK 
+Test   7, Time 0.05, Memory  8831, Verdict    OK 
+Test   8, Time 0.10, Memory  8831, Verdict    OK 
+Test   9, Time 0.07, Memory  8823, Verdict    OK 
+Test  10, Time 0.01, Memory     0, Verdict    OK 
+---Contestant "madarasalexandra" score for problem "ghiozdan" is : 100 
+
+---Contestant: moldoveanvlad, Problem: ghiozdan
+Test   1, Time 0.01, Memory     0, Verdict    OK 
+Test   2, Time 0.01, Memory     0, Verdict    OK 
+Test   3, Time 0.01, Memory     0, Verdict    OK 
+Test   4, Time 0.01, Memory     0, Verdict    OK 
+Test   5, Time 0.02, Memory  8133, Verdict    OK 
+Test   6, Time 0.16, Memory  8853, Verdict    OK 
+Test   7, Time 0.19, Memory  8845, Verdict    OK 
+Test   8, Time 0.16, Memory  8845, Verdict    OK 
+Test   9, Time 0.15, Memory  8837, Verdict    OK 
+Test  10, Time 0.01, Memory     0, Verdict    OK 
+---Contestant "moldoveanvlad" score for problem "ghiozdan" is : 100 
+
+---Contestant: netarazvan, Problem: ghiozdan
+Test   1, Time 1.00, Memory  9808, Verdict   TLE 
+Test   2, Time 1.00, Memory  8679, Verdict   TLE 
+Test   3, Time 1.00, Memory  8679, Verdict   TLE 
+Test   4, Time 1.00, Memory  8687, Verdict   TLE 
+Test   5, Time 1.00, Memory  8671, Verdict   TLE 
+Test   6, Time 1.00, Memory  8679, Verdict   TLE 
+Test   7, Time 1.00, Memory  8679, Verdict   TLE 
+Test   8, Time 1.00, Memory  8687, Verdict   TLE 
+Test   9, Time 1.00, Memory  8687, Verdict   TLE 
+Test  10, Time 1.00, Memory  8679, Verdict   TLE 
+---Contestant "netarazvan" score for problem "ghiozdan" is : 0 
+
+---Contestant: sarandiandrei, Problem: ghiozdan
+Test   1, Time 0.01, Memory     0, Verdict    OK 
+Test   2, Time 0.01, Memory     0, Verdict    OK 
+Test   3, Time 0.01, Memory     0, Verdict    WA 
+Test   4, Time 0.01, Memory     0, Verdict    WA 
+Test   5, Time 0.01, Memory     0, Verdict    WA 
+Test   6, Time 0.05, Memory  8831, Verdict    WA 
+Test   7, Time 0.05, Memory  8823, Verdict    WA 
+Test   8, Time 0.05, Memory  8815, Verdict    WA 
+Test   9, Time 0.05, Memory  8823, Verdict    WA 
+Test  10, Time 0.01, Memory     0, Verdict    OK 
+---Contestant "sarandiandrei" score for problem "ghiozdan" is : 30 

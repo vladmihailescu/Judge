@@ -4,12 +4,7 @@
 #include "defines.h"
 
 namespace util{
-    enum class Verdict{
-        OK,
-        WA,
-        TLE,
-        KBS
-    };
+    enum class Message{ OK, WA, TLE, KBS, MLE };
 
     int CompareFiles(std::string FirstFilePath, std::string SecondFilePath);
 

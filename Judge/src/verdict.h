@@ -3,19 +3,20 @@
 
 #include "defines.h"
 
-/*
 class Verdict{
 public:
     Verdict();
+    Verdict(util::Message InitMessage, float Time, int MemoryKb);
 
-    const util::Message& GetMessage();
-    const float& GetTime();
-    const float& GetMemory();
+    util::Message GetMessage();
+    float GetTime();
+    int GetMemory();
+
 private:
     util::Message m_message;
     float m_time;
     int m_memoryKb;
-}
-*/
+};
+
 
 #endif
