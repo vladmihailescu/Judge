@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1529954697 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
+1530033769 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
 	"contestant.h"
 
-1529952013 d:\programs\github\judge\judge\judge\src\contestant.h
+1530032428 d:\programs\github\judge\judge\judge\src\contestant.h
 	"defines.h"
 	"problem.h"
 	"verdict.h"
 
-1529953208 d:\programs\github\judge\judge\judge\src\problem.h
+1530032433 d:\programs\github\judge\judge\judge\src\problem.h
 	"defines.h"
 
 1529953089 d:\programs\github\judge\judge\judge\src\util.h
@@ -19,12 +19,13 @@
 1529864353 source:d:\programs\github\judge\judge\judge\src\util.cpp
 	"util.h"
 
-1529955547 source:d:\programs\github\judge\judge\judge\src\main.cpp
+1530033845 source:d:\programs\github\judge\judge\judge\src\main.cpp
 	"problem.h"
 	"contestant.h"
+	"localdirectory.h"
 	"defines.h"
 
-1529954171 d:\programs\github\judge\judge\judge\src\defines.h
+1530030598 d:\programs\github\judge\judge\judge\src\defines.h
 	"string"
 	"map"
 	"windows.h"
@@ -34,11 +35,18 @@
 	"fstream"
 	"utility"
 	"Psapi.h"
+	"vector"
 	"util.h"
 
-1529954703 d:\programs\github\judge\judge\judge\src\verdict.h
+1530032440 d:\programs\github\judge\judge\judge\src\verdict.h
 	"defines.h"
 
 1529954707 source:d:\programs\github\judge\judge\judge\src\verdict.cpp
 	"verdict.h"
+
+1530031832 source:d:\programs\github\judge\judge\judge\src\localdirectory.cpp
+	"localdirectory.h"
+
+1530032471 d:\programs\github\judge\judge\judge\src\localdirectory.h
+	"defines.h"
 

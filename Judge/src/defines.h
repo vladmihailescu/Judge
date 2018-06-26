@@ -10,6 +10,7 @@
 #include "fstream"
 #include "utility"
 #include "Psapi.h"
+#include "vector"
 
 #include "util.h"
 

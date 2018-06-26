@@ -1,46 +1,35 @@
 #include "problem.h"
 #include "contestant.h"
+#include "localdirectory.h"
 #include "defines.h"
 
 int main(){
-    std::string problemName = "";
+    char problemName[MAX_PATH];
     float timeLimit = 0.0;
     int testCases = 0;
     int testPoints = 0;
 
-    std::cout << "Problem nameee: ";
-    std::cin >> problemName;
-    std::cout << "Time limit: ";
-    std::cin >> timeLimit;
-    std::cout << "Number of test cases: ";
-    std::cin >> testCases;
-    std::cout << "Points per test case: ";
-    std::cin >> testPoints;
+    printf("Problem name: \n");
+    scanf("%s",problemName);
+    printf("Time limit: \n");
+    scanf("%f",&timeLimit);
+    printf("Number of test cases: \n");
+    scanf("%d",&testCases);
+    printf("Points per test case: \n");
+    scanf("%d",&testPoints);
 
-    Problem ghiozdan{"in","out",problemName,testCases,testPoints,timeLimit};
+    Problem problem{"in","out",problemName,testCases,testPoints,timeLimit};
 
-    Contestant a{"axinteteodor.cpp"};
-    a.JudgeProblem(ghiozdan);
-    a.AppendScoreToFile("results.txt", ghiozdan);
+    LocalDirectory a;
 
-    Contestant b{"burdescualexandru.cpp"};
-    b.JudgeProblem(ghiozdan);
-    b.AppendScoreToFile("results.txt", ghiozdan);
+    std::vector<std::string> t = a.GetSources();
 
-    Contestant c{"madarasalexandra.cpp"};
-    c.JudgeProblem(ghiozdan);
-    c.AppendScoreToFile("results.txt", ghiozdan);
-
-    Contestant d{"moldoveanvlad.cpp"};
-    d.JudgeProblem(ghiozdan);
-    d.AppendScoreToFile("results.txt", ghiozdan);
-
-    Contestant e{"netarazvan.cpp"};
-    e.JudgeProblem(ghiozdan);
-    e.AppendScoreToFile("results.txt", ghiozdan);
-
-    Contestant f{"sarandiandrei.cpp"};
-    f.JudgeProblem(ghiozdan);
-    f.AppendScoreToFile("results.txt", ghiozdan);
+    for(auto i : t){
+        Contestant currentContestant{i};
+        if(".cpp" == currentContestant.GetSourceExtension() || ".c" == currentContestant.GetSourceExtension()){
+            currentContestant.JudgeProblem(problem);
+            currentContestant.AppendScoreToFile("results.txt", problem);
+        }
+    }
     return 0;
 }

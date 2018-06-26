@@ -32,9 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add library="psapi" />
+		</Linker>
 		<Unit filename="src/contestant.cpp" />
 		<Unit filename="src/contestant.h" />
 		<Unit filename="src/defines.h" />
+		<Unit filename="src/localdirectory.cpp" />
+		<Unit filename="src/localdirectory.h" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/problem.cpp" />
 		<Unit filename="src/problem.h" />
@@ -42,7 +47,6 @@
 		<Unit filename="src/util.h" />
 		<Unit filename="src/verdict.cpp" />
 		<Unit filename="src/verdict.h" />
-		<Unit filename="verdict.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

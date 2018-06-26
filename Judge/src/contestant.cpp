@@ -25,7 +25,12 @@ void Contestant::JudgeProblem(Problem CurrentProblem){
     std::string exeFile = m_sourceName + "Exec";
     std::string cmd;
 
-    cmd = "g++ " + m_sourceName + m_sourceExtension + " -o " + exeFile;
+    if(m_sourceExtension == ".cpp"){
+        cmd = "g++ -std=c++1y " + m_sourceName + m_sourceExtension + " -o " + exeFile;
+    }
+    if(m_sourceExtension == ".c"){
+        cmd = "gcc -std=c99 " + m_sourceName + m_sourceExtension + " -o " + exeFile;
+    }
     system(cmd.c_str());
 
     for(int i = 1; i <= CurrentProblem.GetNumberOfTests(); ++i){
@@ -89,7 +94,7 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
     float timeLimitInSeconds = CurrentProblem.GetTimeLimit();
     int timeLimitInMilliseconds = (int)((float)timeLimitInSeconds * (float)1000);
     int timeElapsedInMilliseconds = 0;
-    int timeLapseInMilliseconds = 10;
+    int timeLapseInMilliseconds = 1;
     DWORD processExitCode = 0;
     PROCESS_INFORMATION pi { 0 };
     STARTUPINFO si { 0 };
@@ -171,5 +176,9 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
     system(cmd.c_str());
 
     return {verdict, timeElapsedInMilliseconds / 1000.0, memoryUsed / 1024};
+}
+
+std::string Contestant::GetSourceExtension(){
+    return m_sourceExtension;
 }
 

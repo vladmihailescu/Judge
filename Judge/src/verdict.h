@@ -16,6 +16,7 @@ private:
     util::Message m_message;
     float m_time;
     int m_memoryKb;
+
 };
 
 

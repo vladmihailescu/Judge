@@ -12,6 +12,8 @@ public:
     void JudgeProblem(Problem CurrentProblem);
     void AppendScoreToFile(std::string FileName, Problem CurrentProblem);
 
+    std::string GetSourceExtension();
+
 private:
     void CopyFileLocal(std::string Path, std::string Destination);
     Verdict RunSource(Problem CurrentProblem);
@@ -21,6 +23,7 @@ private:
     std::string m_sourceExtension;
     std::map<int, Verdict> m_score;
     int m_totalScore;
+
 };
 
 #endif

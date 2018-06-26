@@ -28,6 +28,7 @@ private:
     int m_nrTests;
     int m_testPoints;
     float m_secondsTimeLimit;
+
 };
 
 #endif
