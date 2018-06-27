@@ -1,25 +1,25 @@
 # depslib dependency file v1.0
-1530033769 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
+1530055057 source:d:\programs\github\judge\judge\judge\src\contestant.cpp
 	"contestant.h"
 
-1530032428 d:\programs\github\judge\judge\judge\src\contestant.h
+1530109979 d:\programs\github\judge\judge\judge\src\contestant.h
 	"defines.h"
 	"problem.h"
 	"verdict.h"
 
-1530032433 d:\programs\github\judge\judge\judge\src\problem.h
+1530053735 d:\programs\github\judge\judge\judge\src\problem.h
 	"defines.h"
 
-1529953089 d:\programs\github\judge\judge\judge\src\util.h
+1530055226 d:\programs\github\judge\judge\judge\src\util.h
 	"defines.h"
 
-1529951404 source:d:\programs\github\judge\judge\judge\src\problem.cpp
+1530053932 source:d:\programs\github\judge\judge\judge\src\problem.cpp
 	"problem.h"
 
-1529864353 source:d:\programs\github\judge\judge\judge\src\util.cpp
+1530053469 source:d:\programs\github\judge\judge\judge\src\util.cpp
 	"util.h"
 
-1530033845 source:d:\programs\github\judge\judge\judge\src\main.cpp
+1530034818 source:d:\programs\github\judge\judge\judge\src\main.cpp
 	"problem.h"
 	"contestant.h"
 	"localdirectory.h"
@@ -41,10 +41,10 @@
 1530032440 d:\programs\github\judge\judge\judge\src\verdict.h
 	"defines.h"
 
-1529954707 source:d:\programs\github\judge\judge\judge\src\verdict.cpp
+1530054029 source:d:\programs\github\judge\judge\judge\src\verdict.cpp
 	"verdict.h"
 
-1530031832 source:d:\programs\github\judge\judge\judge\src\localdirectory.cpp
+1530054627 source:d:\programs\github\judge\judge\judge\src\localdirectory.cpp
 	"localdirectory.h"
 
 1530032471 d:\programs\github\judge\judge\judge\src\localdirectory.h

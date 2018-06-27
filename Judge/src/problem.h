@@ -5,14 +5,7 @@
 
 class Problem{
 public:
-    Problem(
-        std::string InDirPath,
-        std::string OutDirPath,
-        std::string Name,
-        int NrTests,
-        int TestPoints,
-        float TimeLimit
-    );
+    Problem(std::string InDirPath, std::string OutDirPath, std::string Name, int NrTests, int TestPoints, float TimeLimit);
 
     std::string GetInDirPath();
     std::string GetOkDirPath();

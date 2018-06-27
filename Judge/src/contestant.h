@@ -11,7 +11,6 @@ public:
 
     void JudgeProblem(Problem CurrentProblem);
     void AppendScoreToFile(std::string FileName, Problem CurrentProblem);
-
     std::string GetSourceExtension();
 
 private:

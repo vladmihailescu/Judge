@@ -1,20 +1,13 @@
 #include "problem.h"
 
-Problem::Problem(
-    std::string InDirPath,
-    std::string OkDirPath,
-    std::string Name,
-    int NrTests,
-    int TestPoints,
-    float TimeLimit
-)
+Problem::Problem(std::string InDirPath, std::string OutDirPath, std::string Name, int NrTests, int TestPoints, float TimeLimit)
+:   m_inDirPath { InDirPath },
+    m_okDirPath { OutDirPath },
+    m_name { Name },
+    m_nrTests { NrTests },
+    m_testPoints { TestPoints },
+    m_secondsTimeLimit { TimeLimit }
 {
-    m_inDirPath = InDirPath;
-    m_okDirPath = OkDirPath;
-    m_name = Name;
-    m_nrTests = NrTests;
-    m_testPoints = TestPoints;
-    m_secondsTimeLimit = TimeLimit;
 }
 
 std::string Problem::GetInDirPath(){

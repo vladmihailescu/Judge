@@ -1,6 +1,8 @@
 #include "localdirectory.h"
 
-LocalDirectory::LocalDirectory(){
+LocalDirectory::LocalDirectory()
+:   m_path { "" }
+{
     char aux[MAX_PATH] = {0};
     GetCurrentDirectory(MAX_PATH, aux);
     m_path = aux;

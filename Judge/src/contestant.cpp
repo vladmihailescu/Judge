@@ -1,20 +1,20 @@
 #include "contestant.h"
 
-Contestant::Contestant(std::string sourceName){
-    m_score.clear();
-    m_sourceName = "";
-    m_sourceExtension = "";
-    m_totalScore = 0;
+Contestant::Contestant(std::string SourceName)
+:   m_sourceName { "" },
+    m_sourceExtension { "" },
+    m_score { },
+    m_totalScore { 0 }
+{
     int ext = 0;
-
-    for(int i = 0; i < sourceName.size(); ++i){
-        if(sourceName[i] == '.'){
+    for(int i = 0; i < SourceName.size(); ++i){
+        if(SourceName[i] == '.'){
             ext = 1;
         }
         if(1 == ext){
-            m_sourceExtension += sourceName[i];
+            m_sourceExtension += SourceName[i];
         }else{
-            m_sourceName += sourceName[i];
+            m_sourceName += SourceName[i];
         }
     }
 }
@@ -52,6 +52,7 @@ void Contestant::JudgeProblem(Problem CurrentProblem){
     cmd = "del " + m_sourceName + "Exec" + ".exe";
     system(cmd.c_str());
 }
+
 void Contestant::AppendScoreToFile(std::string FileName, Problem CurrentProblem){
     FILE *f = fopen(FileName.c_str(),"a");
 
@@ -86,32 +87,30 @@ void Contestant::DeleteFileLocal(std::string Path){
 }
 
 Verdict Contestant::RunSource(Problem CurrentProblem){
+    ///NRVO
+    util::Message result = util::Message::OK;
     std::string exeFile = m_sourceName + "Exec";
     std::string cmd = "";
     bool status = 0;
     bool tle = 1;
-    util::Message verdict = util::Message::OK;
+    bool killProcess = 0;
     float timeLimitInSeconds = CurrentProblem.GetTimeLimit();
     int timeLimitInMilliseconds = (int)((float)timeLimitInSeconds * (float)1000);
     int timeElapsedInMilliseconds = 0;
     int timeLapseInMilliseconds = 1;
+    int memoryUsed = 0;
     DWORD processExitCode = 0;
     PROCESS_INFORMATION pi { 0 };
     STARTUPINFO si { 0 };
-    bool killProcess = 0;
-    int memoryUsed = 0;
     PROCESS_MEMORY_COUNTERS memoryMap;
 
     cmd = exeFile + ".exe";
-
     status = CreateProcess(NULL, (LPTSTR)cmd.c_str(), NULL, NULL, TRUE, 0, NULL,
                            NULL, &si, &pi);
-
     if(0 == status){
-        verdict = util::Message::KBS;
+        result = util::Message::KBS;
         goto CleanUp;
     }
-    printf("CreateProcess succeded\n");
     killProcess = 1;
 
     while(timeElapsedInMilliseconds < timeLimitInMilliseconds){
@@ -123,7 +122,7 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
             &processExitCode
         );
         if(0 == status){
-            verdict = util::Message::KBS;
+            result = util::Message::KBS;
             goto CleanUp;
         }
         if(STILL_ACTIVE != processExitCode){
@@ -139,11 +138,9 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
         if(0 == status){
             continue;
         }
-        memoryUsed = std::max(memoryUsed, (int)memoryMap.PeakWorkingSetSize + (int)memoryMap.WorkingSetSize +
-                                     (int)memoryMap.QuotaPeakPagedPoolUsage +
-                                     (int)memoryMap.QuotaPagedPoolUsage + (int)memoryMap.QuotaPeakNonPagedPoolUsage +
-                                     (int)memoryMap.QuotaNonPagedPoolUsage +
-                                     (int)memoryMap.PagefileUsage + (int)memoryMap.PeakPagefileUsage);
+        memoryUsed = std::max(memoryUsed, (int)memoryMap.PeakWorkingSetSize + (int)memoryMap.WorkingSetSize + (int)memoryMap.QuotaPeakPagedPoolUsage +
+            (int)memoryMap.QuotaPagedPoolUsage + (int)memoryMap.QuotaPeakNonPagedPoolUsage + (int)memoryMap.QuotaNonPagedPoolUsage +
+            (int)memoryMap.PagefileUsage + (int)memoryMap.PeakPagefileUsage);
     }
 
     if(1 == tle){
@@ -158,13 +155,13 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
         killProcess = 0;
     }
 
-    verdict = util::Message::OK;
+    result = util::Message::OK;
 
     if(1 == tle){
-        verdict = util::Message::TLE;
+        result = util::Message::TLE;
     }
-    if(util::Message::OK == verdict && 0 == util::CompareFiles(CurrentProblem.GetName() + ".ok", CurrentProblem.GetName() + ".out")){
-        verdict = util::Message::WA;
+    if(util::Message::OK == result && 0 == util::CompareFiles(CurrentProblem.GetName() + ".ok", CurrentProblem.GetName() + ".out")){
+        result = util::Message::WA;
     }
 
     CleanUp:
@@ -175,7 +172,7 @@ Verdict Contestant::RunSource(Problem CurrentProblem){
     cmd = "del " + CurrentProblem.GetName() + ".out";
     system(cmd.c_str());
 
-    return {verdict, timeElapsedInMilliseconds / 1000.0, memoryUsed / 1024};
+    return {result, timeElapsedInMilliseconds / 1000.0, memoryUsed / 1024};
 }
 
 std::string Contestant::GetSourceExtension(){

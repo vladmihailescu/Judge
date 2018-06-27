@@ -1,11 +1,12 @@
 #include "util.h"
 
 int util::CompareFiles(std::string FirstFilePath, std::string SecondFilePath){
+    ///NRVO
+    int result = 1;
     std::ifstream firstFileStream(FirstFilePath);
     std::ifstream secondFileStream(SecondFilePath);
     std::string x;
     std::string y;
-    int result = 1;
 
     while(firstFileStream >> x){
         secondFileStream >> y;
