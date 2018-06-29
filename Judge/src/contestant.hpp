@@ -1,5 +1,5 @@
-#ifndef _CONTESTANT_H_
-#define _CONTESTANT_H_
+#ifndef _CONTESTANT_HPP_
+#define _CONTESTANT_HPP_
 
 #include "windows.h"
 #include "Psapi.h"

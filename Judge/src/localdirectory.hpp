@@ -1,5 +1,5 @@
-#ifndef _LOCALDIRECTORY_H_
-#define _LOCALDIRECTORY_H_
+#ifndef _LOCALDIRECTORY_HPP_
+#define _LOCALDIRECTORY_HPP_
 
 #include "windows.h"
 
