@@ -1,14 +1,11 @@
-#include "problem.h"
-#include "contestant.h"
-#include "localdirectory.h"
-#include "defines.h"
+#include "judge.hpp"
 
 int main(){
     char problemName[MAX_PATH];
     float timeLimit = 0.0;
     int testCases = 0;
     int testPoints = 0;
-
+    printf("<--Judge system-->\n");
     printf("Problem name: \n");
     scanf("%s",problemName);
     printf("Time limit: \n");
@@ -18,14 +15,10 @@ int main(){
     printf("Points per test case: \n");
     scanf("%d",&testPoints);
 
-    Problem problem{"in","out",problemName,testCases,testPoints,timeLimit};
-
-    LocalDirectory a;
-
-    std::vector<std::string> t = a.GetSources();
-
+    judge::Problem problem{"in","out",problemName,testCases,testPoints,timeLimit};
+    std::vector<std::string> t = judge::LocalDirectory::GetSourcesLocalDir();
     for(auto i : t){
-        Contestant currentContestant{i};
+        judge::Contestant currentContestant{i};
         if(".cpp" == currentContestant.GetSourceExtension() || ".c" == currentContestant.GetSourceExtension()){
             currentContestant.JudgeProblem(problem);
             currentContestant.AppendScoreToFile("results.txt", problem);
@@ -33,3 +26,5 @@ int main(){
     }
     return 0;
 }
+
+
