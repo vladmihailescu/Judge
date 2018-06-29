@@ -158,7 +158,6 @@ private:
         cmd = "del " + path;
         system(cmd.c_str());
     }
-
     std::string source_name_;
     std::string source_extension_;
     std::map<int, Verdict> score_;

@@ -15,7 +15,6 @@ public:
     std::string GetPath(){
         return this->path_;
     }
-
     static std::vector<std::string> GetSourcesLocalDir(){
         char aux[MAX_PATH] = {0};
         GetCurrentDirectory(MAX_PATH, aux);

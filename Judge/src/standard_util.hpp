@@ -37,7 +37,6 @@ int CompareFiles(std::string first_file_path, std::string second_file_path){
 inline void SleepInMilliseconds(int milliseconds){
     std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
 }
-
 }
 
 #endif
