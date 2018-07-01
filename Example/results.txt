@@ -1,0 +1,91 @@
+
+---Contestant: source1, Problem: mana
+Test   1, Time 1.00, Memory  3416, Verdict   TLE 
+Test   2, Time 1.00, Memory  2924, Verdict   TLE 
+Test   3, Time 1.00, Memory  2924, Verdict   TLE 
+Test   4, Time 1.00, Memory  2924, Verdict   TLE 
+Test   5, Time 1.00, Memory  2924, Verdict   TLE 
+Test   6, Time 1.00, Memory  2924, Verdict   TLE 
+Test   7, Time 1.00, Memory  2924, Verdict   TLE 
+Test   8, Time 1.00, Memory  2924, Verdict   TLE 
+Test   9, Time 1.00, Memory  2924, Verdict   TLE 
+Test  10, Time 1.00, Memory  2920, Verdict   TLE 
+---Contestant "source1" score for problem "mana" is : 0 
+
+---Contestant: source2, Problem: mana
+Test   1, Time 0.00, Memory  3332, Verdict    OK 
+Test   2, Time 0.00, Memory  2728, Verdict    WA 
+Test   3, Time 0.00, Memory  2952, Verdict    WA 
+Test   4, Time 0.00, Memory  2744, Verdict    WA 
+Test   5, Time 0.00, Memory  2972, Verdict    WA 
+Test   6, Time 0.01, Memory  3048, Verdict    WA 
+Test   7, Time 0.26, Memory  3048, Verdict    WA 
+Test   8, Time 0.28, Memory  3048, Verdict    WA 
+Test   9, Time 0.27, Memory  3048, Verdict    WA 
+Test  10, Time 0.00, Memory  2196, Verdict    WA 
+---Contestant "source2" score for problem "mana" is : 10 
+
+---Contestant: source3, Problem: mana
+Test   1, Time 0.00, Memory  3104, Verdict    OK 
+Test   2, Time 0.00, Memory  2336, Verdict    OK 
+Test   3, Time 0.00, Memory  2744, Verdict    OK 
+Test   4, Time 0.00, Memory  3064, Verdict    OK 
+Test   5, Time 0.00, Memory  2832, Verdict    OK 
+Test   6, Time 0.01, Memory  3032, Verdict    WA 
+Test   7, Time 0.08, Memory  3084, Verdict    OK 
+Test   8, Time 0.13, Memory  3048, Verdict    OK 
+Test   9, Time 0.10, Memory  3084, Verdict    OK 
+Test  10, Time 0.00, Memory  2732, Verdict    OK 
+---Contestant "source3" score for problem "mana" is : 90 
+
+---Contestant: source4, Problem: mana
+Test   1, Time 0.00, Memory     0, Verdict   KBS 
+Test   2, Time 0.00, Memory     0, Verdict   KBS 
+Test   3, Time 0.00, Memory     0, Verdict   KBS 
+Test   4, Time 0.00, Memory     0, Verdict   KBS 
+Test   5, Time 0.00, Memory     0, Verdict   KBS 
+Test   6, Time 0.00, Memory     0, Verdict   KBS 
+Test   7, Time 0.00, Memory     0, Verdict   KBS 
+Test   8, Time 0.00, Memory     0, Verdict   KBS 
+Test   9, Time 0.00, Memory     0, Verdict   KBS 
+Test  10, Time 0.00, Memory     0, Verdict   KBS 
+---Contestant "source4" score for problem "mana" is : 0 
+
+---Contestant: source5, Problem: mana
+Test   1, Time 0.01, Memory  3568, Verdict    WA 
+Test   2, Time 0.00, Memory  3084, Verdict    OK 
+Test   3, Time 0.00, Memory  3060, Verdict    WA 
+Test   4, Time 0.00, Memory  2756, Verdict    WA 
+Test   5, Time 0.00, Memory  2936, Verdict    OK 
+Test   6, Time 0.00, Memory  3056, Verdict    WA 
+Test   7, Time 0.02, Memory  3096, Verdict    WA 
+Test   8, Time 0.02, Memory  3096, Verdict    OK 
+Test   9, Time 0.02, Memory  3140, Verdict    WA 
+Test  10, Time 0.00, Memory  2928, Verdict    OK 
+---Contestant "source5" score for problem "mana" is : 40 
+
+---Contestant: source6, Problem: mana
+Test   1, Time 0.01, Memory  3456, Verdict    OK 
+Test   2, Time 0.00, Memory  2844, Verdict    OK 
+Test   3, Time 0.00, Memory  2932, Verdict    OK 
+Test   4, Time 0.00, Memory  2660, Verdict    OK 
+Test   5, Time 0.00, Memory  2232, Verdict    OK 
+Test   6, Time 0.02, Memory  3016, Verdict    OK 
+Test   7, Time 0.34, Memory  3016, Verdict    OK 
+Test   8, Time 0.19, Memory  3016, Verdict    OK 
+Test   9, Time 0.23, Memory  3016, Verdict    OK 
+Test  10, Time 0.00, Memory  2932, Verdict    OK 
+---Contestant "source6" score for problem "mana" is : 100 
+
+---Contestant: source7, Problem: mana
+Test   1, Time 0.00, Memory  3208, Verdict    OK 
+Test   2, Time 0.00, Memory  2940, Verdict    OK 
+Test   3, Time 0.00, Memory  2924, Verdict    OK 
+Test   4, Time 0.00, Memory  2744, Verdict    OK 
+Test   5, Time 0.00, Memory  2132, Verdict    OK 
+Test   6, Time 0.03, Memory  3028, Verdict    OK 
+Test   7, Time 0.43, Memory  3028, Verdict    OK 
+Test   8, Time 0.22, Memory  3028, Verdict    OK 
+Test   9, Time 0.25, Memory  3028, Verdict    OK 
+Test  10, Time 0.00, Memory  3068, Verdict    OK 
+---Contestant "source7" score for problem "mana" is : 100 
