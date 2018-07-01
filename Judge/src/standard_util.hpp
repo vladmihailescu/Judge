@@ -8,10 +8,11 @@
 namespace judge{
 enum class Message{
     OK = 0,
-    WA,
-    TLE,
-    KBS,
-    MLE
+    WA,     //Wrong answer
+    TLE,    //Time limit exceeded
+    KBS,    //Killed by signal
+    MLE,    //Memory limit exceeded
+    CE      //Compilation error
 };
 int CompareFiles(std::string first_file_path, std::string second_file_path){
     int result = 1;

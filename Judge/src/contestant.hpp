@@ -39,10 +39,14 @@ public:
             cmd = "g++ -std=c++1y " + source_name_ + source_extension_ + " -o " + exe_file;
         if(source_extension_ == ".c")
             cmd = "gcc -std=c99 " + source_name_ + source_extension_ + " -o " + exe_file;
-        system(cmd.c_str());
+        int status = system(cmd.c_str());
+
+        //check for compilation error
+        for(int i = 1; i <= current_problem.GetNumberOfTests() && status; ++i)
+            score_[i] = {judge::Message::CE, 0, 0};
 
         //run .exe for all tests
-        for(int i = 1; i <= current_problem.GetNumberOfTests(); ++i){
+        for(int i = 1; i <= current_problem.GetNumberOfTests() && !status; ++i){
             std::string in_file = current_problem.GetInDirPath() + "\\" + std::to_string(i) + "-" + current_problem.GetName() + ".in";
             std::string ok_file = current_problem.GetOkDirPath() + "\\" + std::to_string(i) + "-" + current_problem.GetName() + ".ok";
             CopyFileLocal(in_file, current_problem.GetName() + ".in");
@@ -72,6 +76,8 @@ public:
                 judge_message = "WA";
             if(i.second.GetMessageAA() == judge::Message::KBS)
                 judge_message = "KBS";
+            if(i.second.GetMessageAA() == judge::Message::CE)
+                judge_message = "CE";
             fprintf(f, "Test %3d, Time %2.2f, Memory %5d, Verdict %5s \n", i.first, i.second.GetTime(), i.second.GetMemory(), judge_message.c_str());
         }
         fprintf(f,"---Contestant \"%s\" score for problem \"%s\" is : %d \n",
